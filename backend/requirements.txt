@@ -1,0 +1,23 @@
+# ── Core ──────────────────────────────────────────────────────────
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+python-dotenv==1.0.0
+
+# ── Base de datos ─────────────────────────────────────────────────
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
+alembic==1.12.1
+
+# ── Autenticación ─────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0
+bcrypt==4.1.1
+pydantic[email]==2.5.0
+
+# ── Reportes (próxima versión) ────────────────────────────────────
+# reportlab==4.0.7
+# openpyxl==3.1.2
+
+# ── Testing ───────────────────────────────────────────────────────
+pytest==7.4.3
+httpx==0.25.2

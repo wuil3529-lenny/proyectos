@@ -1,0 +1,112 @@
+# ============================================================================
+# REQUIREMENTS.TXT - DEPENDENCIAS DEL PROYECTO
+# ============================================================================
+#
+# Instalación: pip install -r requirements.txt
+#
+
+# ============================================================================
+# FRAMEWORK WEB
+# ============================================================================
+fastapi==0.104.1              # Framework web moderno y rápido
+uvicorn==0.24.0               # Servidor ASGI para FastAPI
+python-multipart==0.0.6        # Para parsear form data
+
+
+# ============================================================================
+# BASE DE DATOS
+# ============================================================================
+sqlalchemy==2.0.23             # ORM y SQL toolkit
+psycopg2-binary==2.9.9         # Driver PostgreSQL para Python
+alembic==1.12.1                # Migraciones de BD (para futuro)
+
+
+# ============================================================================
+# SEGURIDAD Y AUTENTICACIÓN
+# ============================================================================
+python-jose==3.3.0             # Implementación JWT
+bcrypt==4.1.1                  # Hasheo de contraseñas
+pydantic==2.5.0                # Validación de datos
+email-validator==2.1.0         # Validación de emails
+
+
+# ============================================================================
+# INTELIGENCIA ARTIFICIAL (Para predicciones)
+# ============================================================================
+scikit-learn==1.3.2            # Machine learning (RandomForest, etc)
+numpy==1.26.2                  # Operaciones numéricas
+pandas==2.1.3                  # Manipulación de datos
+tensorflow==2.14.0             # (Opcional, para redes neuronales avanzadas)
+
+
+# ============================================================================
+# GENERACIÓN DE REPORTES
+# ============================================================================
+reportlab==4.0.7               # Generación de PDFs
+openpyxl==3.11.0               # Generación de archivos Excel (.xlsx)
+python-docx==0.8.11            # Generación de documentos Word
+
+
+# ============================================================================
+# INTEGRACIÓN CON SERVICIOS EXTERNOS
+# ============================================================================
+requests==2.31.0               # Solicitudes HTTP
+google-cloud-storage==2.10.0   # (Opcional) Integración Google Drive/Storage
+python-dotenv==1.0.0           # Cargar variables de .env
+
+
+# ============================================================================
+# NOTIFICACIONES Y COMUNICACIÓN
+# ============================================================================
+python-telegram-bot==20.2      # (Opcional) Notificaciones Telegram
+smtplib-async==1.0.0           # (Opcional) Envío de emails
+firebase-admin==6.2.0          # (Opcional) Push notifications
+
+
+# ============================================================================
+# MONITOREO Y LOGGING
+# ============================================================================
+python-json-logger==2.0.7      # Logs en formato JSON
+sentry-sdk==1.38.0             # (Opcional) Monitoreo de errores
+
+
+# ============================================================================
+# DESARROLLO Y TESTING
+# ============================================================================
+pytest==7.4.3                  # Testing framework
+pytest-asyncio==0.21.1         # Testing async
+black==23.12.0                 # Formateador de código
+flake8==6.1.0                  # Linter de código
+mypy==1.7.1                    # Type checking
+
+
+# ============================================================================
+# PRODUCCIÓN
+# ============================================================================
+gunicorn==21.2.0               # Servidor WSGI para producción (alternativa)
+python-cors==0.1.1             # CORS en producción
+
+
+# ============================================================================
+# NOTAS:
+# ============================================================================
+#
+# Librerías principales explicadas:
+#
+# fastapi         - Framework web que vamos a usar
+# sqlalchemy      - Manejo de BD mediante objetos (ORM)
+# psycopg2        - Conexión a PostgreSQL
+# bcrypt          - Encriptación segura de contraseñas
+# python-jose     - Generación y validación de JWT tokens
+# scikit-learn    - Machine learning para predicciones
+# reportlab       - Generación de PDFs para reportes
+# openpyxl        - Generación de archivos Excel
+#
+# OPCIONAL = Sin estos módulos funciona el MVP, pero agrega funcionalidad
+#
+# Pasos para instalar:
+# 1. python -m venv venv              (crear ambiente virtual)
+# 2. source venv/bin/activate         (activar en Linux/Mac)
+#    o venv\Scripts\activate           (activar en Windows)
+# 3. pip install -r requirements.txt  (instalar dependencias)
+# 4. uvicorn main:app --reload        (iniciar servidor)
